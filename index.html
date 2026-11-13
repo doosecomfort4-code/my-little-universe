@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Little Universe 💜</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: linear-gradient(140deg,#321b49,#8653a5,#e9a9ce);
+  color: white;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 35px 20px;
+  max-width: 650px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 38px;
+  margin-top: 70px;
+}
+
+h2 {
+  color: #ffe0f0;
+}
+
+p {
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+button {
+  background: #ffe0ef;
+  color: #63376f;
+  border: none;
+  border-radius: 30px;
+  padding: 14px 24px;
+  font-size: 15px;
+  margin: 12px;
+  cursor: pointer;
+}
+
+.card {
+  background: rgba(255,255,255,.13);
+  padding: 25px;
+  border-radius: 22px;
+  margin: 22px 0;
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+.page {
+  display: none;
+  animation: appear 1s;
+}
+
+#home {
+  display: block;
+}
+
+@keyframes appear {
+  from {opacity:0; transform:translateY(15px);}
+  to {opacity:1; transform:translateY(0);}
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  animation: float 9s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes float {
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+input {
+  max-width: 100%;
+  margin: 15px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+footer {
+  padding: 30px;
+  font-size: 13px;
+  opacity: .8;
+}
+</style>
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<div class="container">
+
+<section id="home" class="page">
+  <p>✨ A LITTLE SOMETHING FOR YOU ✨</p>
+  <h1>Hey baby... 😏❤️</h1>
+
+  <p>
+    Surprised? I made something special
+    just for you.
+  </p>
+
+  <p>
+    Sometimes words aren't enough to explain
+    how much someone means to you.
+  </p>
+
+  <button onclick="showPage('story')">
+    Open your surprise 💗
+  </button>
+</section>
+
+
+<section id="story" class="page">
+  <h1>Our Little Story 💜</h1>
+
+  <div class="card">
+    <p>
+      Somewhere between ordinary conversations
+      and unexpected moments, you became
+      someone incredibly special to me.
+    </p>
+
+    <p>
+      I didn't know our story would become
+      something I would treasure this much.
+    </p>
+
+    <p>
+      And honestly, I'm grateful our paths crossed.
+    </p>
+  </div>
+
+  <button onclick="showPage('reasons')">
+    Next surprise ❤️
+  </button>
+</section>
+
+
+<section id="reasons" class="page">
+  <h1>10 Things About You 🥹</h1>
+
+  <div class="card">
+    <p>1. Your presence makes my days better.</p>
+    <p>2. Your smile makes me happy.</p>
+    <p>3. I love how we can talk.</p>
+    <p>4. I appreciate your honesty.</p>
+    <p>5. You're someone I care deeply about.</p>
+    <p>6. I love our little jokes.</p>
+    <p>7. I appreciate your strength.</p>
+    <p>8. I love our connection.</p>
+    <p>9. I enjoy making memories with you.</p>
+    <p>10. Simply because you're YOU. ❤️</p>
+  </div>
+
+  <button onclick="showPage('letter')">
+    Read my letter 💌
+  </button>
+</section>
+
+
+<section id="letter" class="page">
+  <h1>A Letter For You 💌</h1>
+
+  <div class="card">
+    <p>My baby,</p>
+
+    <p>
+      I don't think you fully understand how
+      much happiness you bring into my life.
+      Even from miles away, you have a way
+      of making me feel remembered and appreciated.
+    </p>
+
+    <p>
+      I don't expect every day to be perfect.
+      I just hope we continue learning,
+      understanding and supporting each other.
+    </p>
+
+    <p>
+      Thank you for being part of my story.
+      You mean more to me than these little
+      paragraphs could ever explain.
+    </p>
+
+    <p>With lots of love, ❤️</p>
+    <p>Your favourite person. 💜</p>
+  </div>
+
+  <button onclick="showPage('memories')">
+    Our memories 📸
+  </button>
+</section>
+
+
+<section id="memories" class="page">
+  <h1>Our Memories 📸</h1>
+
+  <div class="card">
+    <p>
+      A little space for the moments
+      we never want to forget.
+    </p>
+
+    <input type="file" accept="image/*"
+      multiple onchange="previewImages(event)">
+
+    <div id="gallery"></div>
+  </div>
+
+  <button onclick="showPage('future')">
+    One last thing... 💍
+  </button>
+</section>
+
+
+<section id="future" class="page">
+  <h1>Our Tomorrow 💜</h1>
+
+  <div class="card">
+    <p>
+      I hope we get to experience beautiful
+      things together.
+    </p>
+
+    <p>
+      More laughter, more memories,
+      more achievements and more reasons
+      to be grateful.
+    </p>
+
+    <p>
+      I hope we keep choosing kindness,
+      patience and understanding.
+    </p>
+
+    <h2>Here's to the beautiful memories
+    still waiting for us. ❤️</h2>
+
+    <h1>Me & You 🥹</h1>
+  </div>
+
+  <button onclick="showPage('home')">
+    Read it again 💗
+  </button>
+</section>
+
+</div>
+
+<footer>
+  Made with love, just for you. 💜
+</footer>
+
+<script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => {
+    p.style.display = 'none';
+  });
+
+  document.getElementById(id).style.display = 'block';
+
+  window.scrollTo(0,0);
+}
+
+function previewImages(event) {
+  const gallery = document.getElementById('gallery');
+
+  Array.from(event.target.files).forEach(file => {
+    const img = document.createElement('img');
+    img.src = URL.createObjectURL(file);
+    gallery.appendChild(img);
+  });
+}
+
+setInterval(() => {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerHTML = '💜';
+  heart.style.left = Math.random()*100 + 'vw';
+  heart.style.fontSize = '22px';
+
+  document.body.appendChild(heart);
+
+  setTimeout(() => heart.remove(),9000);
+},700);
+</script>
+
+</body>
+</html>
