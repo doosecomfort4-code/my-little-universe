@@ -307,4 +307,77 @@ setInterval(() => {
 </script>
 
 </body>
+<section id="secret-quiz" style="padding:30px 18px; text-align:center; background:linear-gradient(135deg,#f5e8ff,#ffe5f1); border-radius:24px; margin:25px 10px; color:#54245f;">
+  <h2>💌 A Little Quiz for You</h2>
+  <p>Answer these little questions before opening your surprise, baby. ❤️</p>
+
+  <div style="height:9px;background:#e6c9ed;border-radius:20px;margin:20px 0;">
+    <div id="quiz-progress" style="height:9px;width:0%;background:#a34bb5;border-radius:20px;transition:width .3s;"></div>
+  </div>
+
+  <p id="quiz-count">Question 1 of 7</p>
+  <h3 id="quiz-question">Who fell first? 👀</h3>
+  <textarea id="quiz-answer" rows="3" placeholder="Your answer..." style="width:90%;padding:12px;border:1px solid #d6a9df;border-radius:12px;font-size:16px;"></textarea>
+  <br><br>
+  <button id="quiz-next" onclick="nextSecretQuestion()" style="background:#873b9c;color:white;border:0;padding:13px 25px;border-radius:25px;font-size:16px;">Next question 💜</button>
+
+  <div id="secret-envelope" style="display:none;margin-top:25px;">
+    <h2>You made it! 🥹❤️</h2>
+    <p>One last little surprise is waiting for you...</p>
+    <button onclick="openSecretLetter()" style="background:#873b9c;color:white;border:0;padding:15px 25px;border-radius:20px;font-size:18px;">💌 Open your envelope</button>
+    <div id="secret-letter" style="display:none;background:white;padding:20px;border-radius:18px;margin-top:20px;line-height:1.8;">
+      <h3>To my favourite person ❤️</h3>
+      <p>Hey baby... if you're reading this, I hope you know how special you are to me.</p>
+      <p>Thank you for the little moments, the laughter, the conversations and all the memories we're making. Even from far away, you make my days brighter.</p>
+      <p>There's still so much I hope we get to experience together. This little universe is just one way of reminding you that you mean a lot to me.</p>
+      <p>Always remember that you're appreciated. ❤️</p>
+      <p>With love, yours 💜</p>
+    </div>
+  </div>
+</section>
+
+<script>
+const secretQuestions = [
+  "Who fell first? 👀",
+  "Who is more stubborn between us? 😂",
+  "What's one thing about me you can never forget?",
+  "Who says 'I miss you' first?",
+  "If we could spend one day together, what would we do?",
+  "What's your favourite thing about us?",
+  "What nickname do you love being called? ❤️"
+];
+
+let secretIndex = 0;
+const secretAnswers = [];
+
+function nextSecretQuestion() {
+  const answer = document.getElementById("quiz-answer").value.trim();
+  if (!answer) {
+    alert("Come on baby, give me an answer! 💜");
+    return;
+  }
+
+  secretAnswers.push(answer);
+  secretIndex++;
+
+  if (secretIndex < secretQuestions.length) {
+    document.getElementById("quiz-question").textContent = secretQuestions[secretIndex];
+    document.getElementById("quiz-count").textContent = "Question " + (secretIndex + 1) + " of 7";
+    document.getElementById("quiz-progress").style.width = (secretIndex / 7 * 100) + "%";
+    document.getElementById("quiz-answer").value = "";
+  } else {
+    document.getElementById("quiz-progress").style.width = "100%";
+    document.getElementById("quiz-question").style.display = "none";
+    document.getElementById("quiz-count").style.display = "none";
+    document.getElementById("quiz-answer").style.display = "none";
+    document.getElementById("quiz-next").style.display = "none";
+    document.getElementById("secret-envelope").style.display = "block";
+  }
+}
+
+function openSecretLetter() {
+  document.getElementById("secret-letter").style.display = "block";
+}
+</script>
+
 </html>
