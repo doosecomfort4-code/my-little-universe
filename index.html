@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#eee6ff">
 <title>Our Little Universe 💜</title>
+
 <style>
 :root {
   --purple:#9876c9;
@@ -31,6 +33,7 @@ button {
   color:white;
   cursor:pointer;
   box-shadow:0 5px 15px #8064a533;
+  margin:5px;
 }
 button:hover { background:var(--deep); }
 button:disabled { opacity:.4; cursor:not-allowed; }
@@ -48,7 +51,7 @@ button:disabled { opacity:.4; cursor:not-allowed; }
   text-align:center;
   border:1px solid #ffffffaa;
   border-radius:28px;
-  background:#fffaf1eF;
+  background:#fffaf1ef;
   box-shadow:0 15px 50px #6d529322;
 }
 h1 { color:var(--deep); font-size:clamp(2rem,7vw,3rem); }
@@ -67,7 +70,9 @@ p { line-height:1.8; }
   color:#a78bd2;
   animation:twinkle 2.5s infinite alternate;
 }
-@keyframes twinkle { to { opacity:.2; transform:scale(.7); } }
+@keyframes twinkle {
+  to { opacity:.2; transform:scale(.7); }
+}
 .moon { font-size:65px; margin:10px; }
 .actions {
   display:flex;
@@ -106,7 +111,29 @@ textarea { min-height:110px; resize:vertical; }
   border-radius:18px;
   text-align:left;
 }
-.card button { margin-top:10px; }
+.photo {
+  width:100%;
+  max-height:250px;
+  object-fit:cover;
+  border-radius:15px;
+}
+.envelope {
+  font-size:100px;
+  cursor:pointer;
+  animation:float 2s infinite ease-in-out;
+}
+@keyframes float {
+  50% { transform:translateY(-10px); }
+}
+.paper {
+  background:#fffdf5;
+  padding:30px 23px;
+  border-radius:8px;
+  box-shadow:0 10px 30px #0002;
+  text-align:left;
+  line-height:2;
+}
+footer { margin-top:25px; font-size:.85rem; opacity:.7; }
 .menu {
   position:fixed;
   top:12px;
@@ -131,33 +158,13 @@ textarea { min-height:110px; resize:vertical; }
   margin:5px 0;
   border-radius:12px;
 }
-.photo {
-  width:100%;
-  max-height:250px;
-  object-fit:cover;
-  border-radius:15px;
-}
-.envelope {
-  font-size:100px;
-  cursor:pointer;
-  animation:float 2s infinite ease-in-out;
-}
-@keyframes float { 50% { transform:translateY(-10px); } }
-.paper {
-  background:#fffdf5;
-  padding:30px 23px;
-  border-radius:8px;
-  box-shadow:0 10px 30px #0002;
-  text-align:left;
-  line-height:2;
-}
-footer { margin-top:25px; font-size:.85rem; opacity:.7; }
 @media(max-width:420px) {
   .panel { padding:25px 17px; }
   .page { padding:65px 12px 25px; }
 }
 </style>
 </head>
+
 <body>
 
 <div class="stars" id="stars"></div>
@@ -178,6 +185,7 @@ footer { margin-top:25px; font-size:.85rem; opacity:.7; }
     <div class="moon">🌙</div>
     <h1>Our Little Universe 💜</h1>
     <p>Hey, baby... ❤️</p>
+
     <p>
       Well, look who found his way here. 😂<br><br>
       I made something special for you. A tiny universe
@@ -187,7 +195,11 @@ footer { margin-top:25px; font-size:.85rem; opacity:.7; }
       but trust me... there's more. 👀<br><br>
       Ready to explore our little universe?
     </p>
-    <button onclick="go('game')">Let's begin our little universe 💜</button>
+
+    <button onclick="go('game')">
+      Let's begin our little universe 💜
+    </button>
+
     <footer>Made with love, just for you.</footer>
   </div>
 </section>
@@ -198,8 +210,11 @@ footer { margin-top:25px; font-size:.85rem; opacity:.7; }
     <p id="questionNumber"></p>
     <div class="progress"><span id="progressBar"></span></div>
     <h2 id="question"></h2>
+
     <textarea id="answer" placeholder="Write your answer here..."></textarea>
-    <p class="small" id="saveStatus">Your answers save on this device.</p>
+
+    <p class="small">Your answers save on this device.</p>
+
     <div class="actions">
       <button id="previous" onclick="previousQuestion()">Previous</button>
       <button id="next" onclick="nextQuestion()">Next</button>
@@ -220,7 +235,9 @@ footer { margin-top:25px; font-size:.85rem; opacity:.7; }
     <h1>Your Answers 💌</h1>
     <p>Here's everything you shared.</p>
     <div id="answerReview"></div>
-    <button onclick="go('appreciation')">Continue to the Next Surprise 💜</button>
+    <button onclick="go('appreciation')">
+      Continue to the Next Surprise 💜
+    </button>
   </div>
 </section>
 
@@ -237,11 +254,14 @@ footer { margin-top:25px; font-size:.85rem; opacity:.7; }
   <div class="panel">
     <h1>Our Memories 📸</h1>
     <p>A little place for moments worth keeping.</p>
+
     <input id="photoInput" type="file" accept="image/*">
     <input id="photoCaption" placeholder="Add a caption...">
     <input id="photoDate" type="date">
+
     <button onclick="addPhoto()">Save Memory</button>
     <div id="photoGallery"></div>
+
     <button onclick="go('dreams')">Next Surprise 💜</button>
   </div>
 </section>
@@ -250,9 +270,12 @@ footer { margin-top:25px; font-size:.85rem; opacity:.7; }
   <div class="panel">
     <h1>Dreams We Share ✨</h1>
     <p>Little things we hope to experience someday.</p>
+
     <textarea id="dreamInput" placeholder="Write a dream here..."></textarea>
     <button onclick="addDream()">Save Our Dream</button>
+
     <div id="dreamList"></div>
+
     <button onclick="go('envelope')">One Last Surprise 💌</button>
   </div>
 </section>
@@ -269,27 +292,56 @@ footer { margin-top:25px; font-size:.85rem; opacity:.7; }
 <section class="page" id="letter">
   <div class="panel">
     <h1>A Little Letter For You</h1>
+
     <div class="paper">
       <p>My dear Felix, ❤️</p>
+
       <p>
         I wanted to create something that would remind you
         how much you mean to me. Even when distance keeps
         us apart, I hope this little universe makes you feel
         appreciated and remembered.
       </p>
+
       <p>
         Thank you for the laughter, the conversations,
         the little moments and the memories we continue
         to create.
       </p>
+
       <p>
         I hope we keep growing, learning and sharing
         beautiful moments together. There are still so
         many things I hope we get to experience.
       </p>
+
       <p>Forever ur girl ❤️</p>
     </div>
+
+    <div class="actions">
+      <button onclick="showEnding()">The End 💜</button>
+    </div>
+
     <footer>Our Little Universe 💜</footer>
+  </div>
+</section>
+
+<section class="page" id="ending">
+  <div class="panel">
+    <div class="moon">🌙</div>
+    <h1>The End 💜</h1>
+    <p>
+      You've reached the end of our little universe.
+    </p>
+    <p>
+      Thank you for exploring every little surprise.
+      I hope it made you smile. ❤️
+    </p>
+    <p>
+      Until our next adventure...
+    </p>
+    <h2>Made with love, just for you. 💜</h2>
+    <p class="small">You can close this page now.</p>
   </div>
 </section>
 
@@ -321,36 +373,50 @@ let answers = JSON.parse(localStorage.getItem("universeAnswers") || "[]");
 function saveAnswers() {
   localStorage.setItem("universeAnswers", JSON.stringify(answers));
 }
+
 function go(id) {
-  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.querySelectorAll(".page").forEach(page => {
+    page.classList.remove("active");
+  });
+
   document.getElementById(id).classList.add("active");
   document.getElementById("menuItems").style.display = "none";
+
   if (id === "game") showQuestion();
   if (id === "answers") showAnswers();
   if (id === "memories") showPhotos();
   if (id === "dreams") showDreams();
 }
+
 function toggleMenu() {
   const menu = document.getElementById("menuItems");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
+
 function showQuestion() {
   document.getElementById("questionNumber").textContent =
     `Question ${current + 1} of ${questions.length}`;
+
   document.getElementById("question").textContent = questions[current];
   document.getElementById("answer").value = answers[current] || "";
+
   document.getElementById("progressBar").style.width =
     ((current + 1) / questions.length * 100) + "%";
+
   document.getElementById("previous").disabled = current === 0;
+
   document.getElementById("next").textContent =
     current === questions.length - 1 ? "Finish" : "Next";
 }
+
 function storeCurrentAnswer() {
   answers[current] = document.getElementById("answer").value;
   saveAnswers();
 }
+
 function nextQuestion() {
   storeCurrentAnswer();
+
   if (current === questions.length - 1) {
     go("finish");
   } else {
@@ -358,109 +424,156 @@ function nextQuestion() {
     showQuestion();
   }
 }
+
 function previousQuestion() {
   storeCurrentAnswer();
+
   if (current > 0) current--;
+
   showQuestion();
 }
+
 function finishGame() {
   storeCurrentAnswer();
-  showAnswers();
   go("answers");
 }
+
 function showAnswers() {
-  document.getElementById("answerReview").innerHTML = "";
-  questions.forEach((q,i) => {
+  const area = document.getElementById("answerReview");
+  area.innerHTML = "";
+
+  questions.forEach((question,i) => {
     const card = document.createElement("div");
     card.className = "card";
+
     const title = document.createElement("strong");
-    title.textContent = `${i+1}. ${q}`;
+    title.textContent = `${i+1}. ${question}`;
+
     const field = document.createElement("textarea");
     field.value = answers[i] || "";
+
     field.addEventListener("input", () => {
       answers[i] = field.value;
       saveAnswers();
     });
-    card.append(title, field);
-    document.getElementById("answerReview").append(card);
+
+    card.append(title,field);
+    area.append(card);
   });
 }
+
 function showAppreciation() {
   const area = document.getElementById("appreciationCards");
   area.innerHTML = "";
+
   appreciation.forEach((message,i) => {
     const card = document.createElement("div");
     card.className = "card";
+
     const button = document.createElement("button");
     button.textContent = `Reveal ${i+1} 💜`;
+
     button.onclick = () => {
       card.textContent = message;
     };
+
     card.append(button);
     area.append(card);
   });
 }
+
 function addPhoto() {
   const file = document.getElementById("photoInput").files[0];
+
   if (!file) {
     alert("Please choose a photo first.");
     return;
   }
+
   const reader = new FileReader();
+
   reader.onload = () => {
-    const photos = JSON.parse(localStorage.getItem("universePhotos") || "[]");
+    const photos = JSON.parse(
+      localStorage.getItem("universePhotos") || "[]"
+    );
+
     photos.push({
       image:reader.result,
       caption:document.getElementById("photoCaption").value,
       date:document.getElementById("photoDate").value
     });
+
     try {
-      localStorage.setItem("universePhotos", JSON.stringify(photos));
+      localStorage.setItem("universePhotos",JSON.stringify(photos));
       showPhotos();
+
       document.getElementById("photoInput").value = "";
       document.getElementById("photoCaption").value = "";
       document.getElementById("photoDate").value = "";
-    } catch(e) {
-      alert("This device's storage is full. Try a smaller photo.");
+    } catch(error) {
+      alert("Storage is full. Please try a smaller photo.");
     }
   };
+
   reader.readAsDataURL(file);
 }
+
 function showPhotos() {
   const area = document.getElementById("photoGallery");
   area.innerHTML = "";
-  const photos = JSON.parse(localStorage.getItem("universePhotos") || "[]");
+
+  const photos = JSON.parse(
+    localStorage.getItem("universePhotos") || "[]"
+  );
+
   photos.forEach(photo => {
     const card = document.createElement("div");
     card.className = "card";
+
     const img = document.createElement("img");
     img.className = "photo";
     img.src = photo.image;
+
     const caption = document.createElement("p");
     caption.textContent = photo.caption || "A little memory 💜";
+
     const date = document.createElement("p");
     date.className = "small";
     date.textContent = photo.date || "";
+
     card.append(img,caption,date);
     area.append(card);
   });
 }
+
 function addDream() {
   const input = document.getElementById("dreamInput");
+
   if (!input.value.trim()) {
     alert("Write a dream first.");
     return;
   }
-  const dreams = JSON.parse(localStorage.getItem("universeDreams") || "[]");
+
+  const dreams = JSON.parse(
+    localStorage.getItem("universeDreams") || "[]"
+  );
+
   dreams.push(input.value.trim());
-  localStorage.setItem("universeDreams", JSON.stringify(dreams));
+
+  localStorage.setItem("universeDreams",JSON.stringify(dreams));
+
   input.value = "";
   showDreams();
 }
+
 function showDreams() {
   const area = document.getElementById("dreamList");
   area.innerHTML = "";
-  const dreams = JSON.parse(localStorage.getItem("universeDreams") || "[]");
+
+  const dreams = JSON.parse(
+    localStorage.getItem("universeDreams") || "[]"
+  );
+
   dreams.forEach(dream => {
     const card = document.createElement("div");
     card.className = "card";
@@ -468,18 +581,21 @@ function showDreams() {
     area.append(card);
   });
 }
+
 function openEnvelope() {
   const envelope = document.querySelector(".envelope");
   envelope.textContent = "💖";
-  setTimeout(() => go("letter"), 700);<p>Forever ur girl ❤️</p>
-</div>
 
-<button onclick="showEnding()">The End 💜</button>
-
-<footer>Our Little Universe 💜</footer>
+  setTimeout(() => go("letter"),700);
 }
+
+function showEnding() {
+  go("ending");
+}
+
 function createStars() {
   const area = document.getElementById("stars");
+
   for (let i=0;i<35;i++) {
     const star = document.createElement("span");
     star.className = "star";
@@ -490,8 +606,10 @@ function createStars() {
     area.append(star);
   }
 }
+
 createStars();
 showAppreciation();
 </script>
+
 </body>
 </html>
