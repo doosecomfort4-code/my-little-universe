@@ -1,423 +1,183 @@
+REBUILD THE ENTIRE WEBSITE FROM SCRATCH — OUR LITTLE UNIVERSE 💜
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Little Universe 💜</title>
+Completely remove the existing website design, old pages, old buttons, old layouts, placeholder content, broken features, and unwanted code fragments. Do not simply edit or patch the old design. Rebuild the entire project as one complete, organised, working experience.
 
-<style>
-:root {
-  --lavender: #b69acb;
-  --deep: #49345d;
-  --cream: #fffaf0;
-  --pink: #ead9ee;
-  --white: #ffffff;
-}
+1. Website identity
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+Name: Our Little Universe
 
-body {
-  font-family: Georgia, serif;
-  background: var(--cream);
-  color: var(--deep);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+This is a private website created for two people: the owner and Felix.
 
-.page {
-  display: none;
-  min-height: 100vh;
-  padding: 35px 20px;
-  text-align: center;
-  animation: fadeIn .7s ease;
-}
+Design style:
 
-.page.active {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
+- Lavender and cream colour palette.
+- Dreamy, elegant, luxurious, playful and interactive.
+- Glowing moon, lavender stars, soft animations and beautiful transitions.
+- Beautiful typography and handwritten-style elements where appropriate.
+- Fully responsive on Android phones, iPhones, tablets and computers.
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+2. Important welcome-page rule
 
-.night {
-  background:
-    radial-gradient(circle at 50% 35%, #76618e, transparent 45%),
-    linear-gradient(160deg, #21182f, #48345d, #21182f);
-  color: white;
-  position: relative;
-  overflow: hidden;
-}
+The welcome page must contain exactly ONE main button.
 
-.stars {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    radial-gradient(2px 2px at 20% 25%, white, transparent),
-    radial-gradient(2px 2px at 75% 20%, white, transparent),
-    radial-gradient(2px 2px at 45% 70%, white, transparent),
-    radial-gradient(2px 2px at 85% 75%, white, transparent),
-    radial-gradient(2px 2px at 15% 85%, white, transparent);
-  background-size: 180px 180px;
-  animation: twinkle 4s infinite alternate;
-}
+Greeting: Hey, baby... ❤️
 
-@keyframes twinkle {
-  from { opacity: .4; }
-  to { opacity: 1; }
-}
+Welcome message:
 
-.moon {
-  font-size: 75px;
-  margin-bottom: 20px;
-  filter: drop-shadow(0 0 18px #e9d5ff);
-}
+"Well, look who found his way here. 😂
 
-h1 {
-  font-size: clamp(30px, 7vw, 46px);
-  margin-bottom: 20px;
-}
+I made something special for you. A tiny universe filled with our little moments, laughter, memories, surprises and a few things I've been wanting to tell you.
 
-h2 {
-  margin-bottom: 18px;
-  font-size: 27px;
-}
+You might think you know what's waiting for you, but trust me... there's more. 👀
 
-p {
-  line-height: 1.8;
-  max-width: 500px;
-  margin: 10px auto;
-}
+Ready to explore our little universe?"
 
-button {
-  border: none;
-  border-radius: 30px;
-  padding: 14px 24px;
-  margin: 10px 5px;
-  background: var(--lavender);
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
-  transition: .25s;
-}
+The only button must say:
 
-button:hover {
-  transform: translateY(-2px);
-  background: var(--deep);
-}
+Let's begin our little universe 💜
 
-button:disabled {
-  opacity: .5;
-  cursor: not-allowed;
-}
+Do not put separate buttons for opening a letter, playing a game, viewing memories or choosing activities on the welcome page.
 
-.card {
-  width: 100%;
-  max-width: 520px;
-  background: white;
-  padding: 28px 22px;
-  border-radius: 24px;
-  box-shadow: 0 8px 30px #49345d15;
-  margin: 12px auto;
-}
+3. The complete guided journey
 
-textarea, input {
-  width: 100%;
-  padding: 14px;
-  border: 1px solid #d9c5e4;
-  border-radius: 12px;
-  font-size: 16px;
-  margin: 12px 0;
-  background: #fffdfb;
-  color: var(--deep);
-}
+Everything must be connected in this exact order:
 
-textarea {
-  min-height: 110px;
-  resize: vertical;
-}
+1. Welcome page.
+2. Ten-question game.
+3. Felix's completed answers.
+4. Little Things I Appreciate About You.
+5. Our Memories.
+6. Dreams We Share.
+7. Secret Envelope.
+8. Final Letter.
 
-.progress {
-  width: 100%;
-  height: 8px;
-  background: var(--pink);
-  border-radius: 20px;
-  overflow: hidden;
-  margin: 15px 0;
-}
+Each stage must lead naturally to the next. Do not let the welcome page become an activity-selection menu.
 
-.progress-fill {
-  height: 100%;
-  width: 0;
-  background: var(--lavender);
-  transition: .3s;
-}
+10-question game
 
-.small {
-  font-size: 13px;
-  opacity: .75;
-}
+Display one question at a time. Allow Felix to type his own answers.
 
-.flower {
-  font-size: 25px;
-  margin: 10px;
-}
+1. What was your first impression of me? 👀
+2. Who do you think fell first?
+3. What's one moment with me you'll never forget?
+4. What's something I do that makes you smile?
+5. Who is more stubborn between us? 😂
+6. If we could spend an entire day together, what would we do?
+7. What's one thing you think we have in common?
+8. What's something you've always wanted to tell me?
+9. What is one experience you hope we share someday?
+10. If you had to describe our little universe in three words, what would they be? ❤️
 
-.envelope {
-  font-size: 100px;
-  cursor: pointer;
-  transition: .5s;
-}
+Include a progress bar, previous and next buttons, automatic saving and an answer-review page. Allow answers to be edited.
 
-.envelope:hover {
-  transform: scale(1.12) rotate(-4deg);
-}
+Felix's answers
 
-.hidden {
-  display: none !important;
-}
+The owner must be able to securely view all of Felix's submitted answers in her private dashboard.
 
-.nav {
-  position: fixed;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
-  background: #fffaf0ee;
-  padding: 7px;
-  border-radius: 30px;
-  box-shadow: 0 4px 20px #0002;
-  z-index: 10;
-}
+Little Things I Appreciate About You
 
-.nav button {
-  padding: 10px 14px;
-  margin: 0;
-  font-size: 13px;
-}
+Create beautiful interactive cards. Each card reveals a sweet personal message when clicked.
 
-.page-content {
-  width: 100%;
-  max-width: 650px;
-  padding-bottom: 65px;
-}
+Our Memories
 
-footer {
-  margin-top: 30px;
-  font-size: 13px;
-  opacity: .7;
-}
+Create a shared photo scrapbook.
 
-@media(max-width: 420px) {
-  .nav button {
-    padding: 9px;
-    font-size: 11px;
-  }
-}
-</style>
-</head>
+Both people can upload pictures and add captions and dates. Both can view the memories. Only the owner can delete memories.
 
-<body>
+Dreams We Share
 
-<!-- PAGE 1: WELCOME -->
-<section id="welcome" class="page active night">
-  <div class="stars"></div>
-  <div class="page-content">
-    <div class="moon">🌙</div>
-    <p>Welcome to</p>
-    <h1>Our Little Universe ✨</h1>
-    <h2>Hey, baby... ❤️</h2>
+Both people can write their dreams and see each other's contributions. Include a feature that identifies dreams they have in common.
 
-    <p>Well, look who found his way here. 😂</p>
-    <p>I made something special for you. A tiny universe filled with our little moments, laughter, memories, surprises and a few things I've been wanting to tell you.</p>
-    <p>You might think you know what's waiting for you, but trust me... there's more. 👀</p>
-    <p>Ready to explore our little universe?</p>
+Secret Envelope
 
-    <button onclick="showPage('game')">
-      Let's begin our little universe 💜
-    </button>
-    <footer>Made with love, just for you.</footer>
-  </div>
-</section>
+Create a beautiful animated envelope. When Felix opens it, show an elegant opening animation and then automatically move to the separate final-letter page.
 
-<!-- PAGE 2: GAME -->
-<section id="game" class="page">
-  <div class="page-content">
-    <h1>Our Little Game 💌</h1>
-    <div class="card">
-      <p id="question-count">Question 1 of 10</p>
-      <div class="progress">
-        <div class="progress-fill" id="progress-fill"></div>
-      </div>
-      <h2 id="question-text">What was your first impression of me? 👀</h2>
-      <textarea id="answer-input" placeholder="Write anything you like..."></textarea>
-      <button onclick="previousQuestion()">Previous</button>
-      <button onclick="nextQuestion()">Next 💜</button>
-    </div>
-  </div>
-</section>
+Final Letter
 
-<!-- PAGE 3: ANSWERS -->
-<section id="answers" class="page">
-  <div class="page-content">
-    <h1>Our Answers 💜</h1>
-    <div class="card">
-      <p>All ten answers will appear here after the game is completed.</p>
-      <p class="small">Shared answers will be connected to our private database in a later stage.</p>
-    </div>
-  </div>
-</section>
+This must be the final page of the journey.
 
-<!-- PAGE 4: APPRECIATION -->
-<section id="reasons" class="page">
-  <div class="page-content">
-    <h1>Little Things I Appreciate About You ❤️</h1>
-    <div class="card">
-      <p>Little messages, little reminders and all the things worth appreciating.</p>
-      <button onclick="showPage('memories')">Continue 💜</button>
-    </div>
-  </div>
-</section>
+Use cream-coloured paper, lavender flowers and a beautiful handwritten-style font.
 
-<!-- PAGE 5: MEMORIES -->
-<section id="memories" class="page">
-  <div class="page-content">
-    <h1>Our Memories 📸</h1>
-    <div class="card">
-      <div class="flower">🌷 💜 🌷</div>
-      <p>Our shared scrapbook will live here.</p>
-      <p class="small">Photo uploads and captions will be connected later.</p>
-      <button onclick="showPage('dreams')">Next 💜</button>
-    </div>
-  </div>
-</section>
+The letter must end with:
 
-<!-- PAGE 6: DREAMS -->
-<section id="dreams" class="page">
-  <div class="page-content">
-    <h1>Dreams We Share 🌙</h1>
-    <div class="card">
-      <p>A little space for both of us to write down our hopes and dreams.</p>
-      <textarea placeholder="Write a dream..."></textarea>
-      <button disabled>Save dream — coming soon</button>
-    </div>
-  </div>
-</section>
+Forever ur girl ❤️
 
-<!-- PAGE 7: ENVELOPE -->
-<section id="envelope" class="page">
-  <div class="page-content">
-    <h1>A Little Something for You 💌</h1>
-    <div class="card">
-      <p>You've reached the final surprise.</p>
-      <div class="envelope" onclick="openEnvelope()">💌</div>
-      <p>Tap the envelope to open it.</p>
-    </div>
-  </div>
-</section>
+4. Navigation
 
-<!-- PAGE 8: FINAL LETTER -->
-<section id="letter" class="page">
-  <div class="page-content">
-    <div class="card" style="background:#fffaf0">
-      <div class="flower">🌷 💜 🌷</div>
-      <h1>To My Favourite Person ❤️</h1>
-      <p>Your personal letter will go here.</p>
-      <p>We'll write it together when we're ready.</p>
-      <h2 style="margin-top:35px">Forever ur girl ❤️</h2>
-      <div class="flower">💜</div>
-    </div>
-  </div>
-</section>
+Every page must occupy the full screen.
 
-<script>
-const questions = [
-  "What was your first impression of me? 👀",
-  "Who do you think fell first?",
-  "What's one moment with me you'll never forget?",
-  "What's something I do that makes you smile?",
-  "Who is more stubborn between us? 😂",
-  "If we could spend an entire day together, what would we do?",
-  "What's one thing you think we have in common?",
-  "What's something you've always wanted to tell me?",
-  "What is one experience you hope we share someday?",
-  "If you had to describe our little universe in three words, what would they be? ❤️"
-];
+Include previous and next navigation and a small menu for revisiting completed pages.
 
-let currentQuestion = 0;
-let answers = Array(10).fill("");
+Felix must be able to revisit pages he has already completed.
 
-function showPage(id) {
-  document.querySelectorAll(".page").forEach(page => {
-    page.classList.remove("active");
-  });
+Keep the final letter as the last stage. Do not provide a separate shortcut to it on the welcome page.
 
-  const destination = document.getElementById(id);
-  if (destination) {
-    destination.classList.add("active");
-    window.scrollTo(0, 0);
-  }
-}
+5. Private login and security
 
-function displayQuestion() {
-  document.getElementById("question-text").textContent =
-    questions[currentQuestion];
+Use Supabase for authentication, database and image storage.
 
-  document.getElementById("question-count").textContent =
-    `Question ${currentQuestion + 1} of 10`;
+There must be only two approved accounts:
 
-  document.getElementById("answer-input").value =
-    answers[currentQuestion];
+- Owner account: full administrator access.
+- Felix's account: member access.
 
-  document.getElementById("progress-fill").style.width =
-    (currentQuestion / 10 * 100) + "%";
-}
+Use email and password login. Do not allow public registration.
 
-function nextQuestion() {
-  answers[currentQuestion] =
-    document.getElementById("answer-input").value.trim();
+The owner must have a private dashboard where she can:
 
-  if (currentQuestion < 9) {
-    currentQuestion++;
-    displayQuestion();
-  } else {
-    showPage("answers");
-  }
-}
+- View Felix's quiz answers.
+- Manage memories and photos.
+- Manage shared dreams.
+- Manage Felix's access.
+- View notification history.
+- Manage website settings.
 
-function previousQuestion() {
-  answers[currentQuestion] =
-    document.getElementById("answer-input").value.trim();
+Notify the owner when Felix uploads a picture, submits or updates his answers, or adds a dream.
 
-  if (currentQuestion > 0) {
-    currentQuestion--;
-    displayQuestion();
-  }
-}
+Do not send Felix notifications when the owner adds content.
 
-function openEnvelope() {
-  const envelope = document.querySelector(".envelope");
-  envelope.style.transform = "scale(1.3) rotate(8deg)";
-  envelope.textContent = "💖";
+Felix can upload photos, add captions and dates, view memories and add dreams. He must not be able to delete memories.
 
-  setTimeout(() => {
-    showPage("letter");
-  }, 900);
-}
+Use proper server-side security and database access policies. Never rely on a hidden URL as the only security measure.
 
-displayQuestion();
-</script>
+6. Technical requirements
 
-</body>
-</html>
+- Build a complete, clean and organised application.
+- Connect all pages and features properly.
+- Make sure all buttons perform their intended actions.
+- Save shared information in the database so it remains available after refreshing or changing devices.
+- Make sure uploaded photos are stored securely.
+- Include suitable error messages and loading states.
+- Test the entire journey from login to the final letter.
+- Do not use fake buttons or non-working placeholders.
+- Do not include background music or autoplay sounds.
+
+7. Remove unwanted technical text
+
+The website must never display raw programming code or technical implementation text to visitors.
+
+Remove any visible text such as:
+
+- document.getElementById
+- document.getElementBy...
+- undefined
+- null
+- [object Object]
+- JavaScript errors
+- debugging messages
+- raw HTML or code fragments
+- unfinished placeholder text
+
+These are not part of the website's design and must never appear on any page.
+
+Keep programming code inside the actual code files, not displayed as website content.
+
+8. Final instruction
+
+Build this as ONE complete, connected, private experience. Do not create separate versions of the website or multiple competing welcome-page options.
+
+Before declaring the project complete, test every page, button, navigation action, login, database feature, photo upload and permission.
+
+If a required service or credential has not yet been configured, clearly identify what setup is needed. Do not pretend an unfinished feature works.
+
+The final result should feel like a beautiful, interactive little universe made for two people.
